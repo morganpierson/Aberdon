@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+}
+
+.cube {
+  height: 500px;
+  width: 500px;
+  border-radius: 10%;
+  background-color: aquamarine;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.text {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 50px;
+  text-align: center;
+}
