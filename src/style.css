@@ -2,23 +2,80 @@
   box-sizing: border-box;
 }
 
+body {
+  background-image: url("../assets/Telluride_real_estate.jpg");
+}
+
 .container {
   display: flex;
 }
 
-.cube {
-  height: 500px;
-  width: 500px;
-  border-radius: 10%;
-  background-color: aquamarine;
+.header {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
+  flex-direction: column;
+  text-align: left;
 }
 
 .text {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 50px;
+  font-family: laca;
+  font-size: 60px;
+  font-weight: 200;
+  font-style: normal;
   text-align: center;
+  color: antiquewhite;
+  align-self: flex-start;
+  margin-left: 20px;
+  margin-top: 30px;
+}
+
+.sub-text {
+  font-family: laca;
+  font-size: 30px;
+  font-weight: 10;
+  font-style: italic;
+  text-align: center;
+  color: antiquewhite;
+  margin-left: 20px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 80px;
+  margin-top: 40px;
+  background-color: whitesmoke;
+  border-radius: 10%;
+  height: 500px;
+  border: 2px solid;
+  border-color: #181731;
+  width: 500px;
+}
+
+.select-dropdown {
+  width: 50%;
+}
+
+.search-button {
+  height: 50px;
+  width: 120px;
+  font-family: laca;
+  font-size: 20px;
+  color: antiquewhite;
+  background-color: #181731;
+  border-radius: 10%;
+  margin-right: 30px;
+  align-self: flex-end;
+}
+
+.search-button:focus {
+  outline: 0;
+}
+
+.card-section {
+  padding-left: 30px;
+  padding-top: 30px;
+}
+
+.card-section-header {
+  font-family: laca;
 }
