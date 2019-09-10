@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
-import Select from 'react-select'
-import SelectSection from './SelectSection'
+import Select from 'react-select';
+import {navigate} from '@reach/router'
+import SelectSection from './SelectSection';
 
 
 const InvestmentSpecsCard = () => {
@@ -18,8 +19,15 @@ const InvestmentSpecsCard = () => {
   const [propertyType, setPropertyType] = useState({value: "Apartments", label: "Apartments"})
 
   return (
-    <div className='card-container'>
-      <SelectSection 
+    <form 
+    className='card-container'
+    onSubmit={(event) => {
+      event.preventDefault();
+      navigate('/results')
+    }}
+    >
+    <h3 className='sub-text'>Find your next investment.</h3>
+     <SelectSection 
         options={stateOptions}
         value={selectedState}
         onChange={(value) => setSelectedState(value)}
@@ -31,8 +39,9 @@ const InvestmentSpecsCard = () => {
         onChange={(value) => setPropertyType(value)}
         title={"Property Type"}
       />
-      <button className='search-button'>Search</button>
-    </div>
+    
+    <button className='search-button'>Search</button>
+    </form>
   )
 }
 

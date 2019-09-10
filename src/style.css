@@ -8,6 +8,37 @@ body {
 
 .container {
   display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.nav-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-self: center;
+  margin-right: 30px;
+}
+
+.nav-item {
+  margin-left: 40px;
+  color: antiquewhite;
+  text-decoration: none;
+  font-family: laca;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.nav-item:hover {
+  text-decoration: underline;
+  text-underline-position: under;
 }
 
 .header {
@@ -20,11 +51,10 @@ body {
   font-family: laca;
   font-size: 60px;
   font-weight: 200;
-  font-style: normal;
   text-align: center;
   color: antiquewhite;
-  align-self: flex-start;
-  margin-left: 20px;
+  align-self: flex-end;
+  margin-left: 30px;
   margin-top: 30px;
 }
 
@@ -32,10 +62,9 @@ body {
   font-family: laca;
   font-size: 30px;
   font-weight: 10;
-  font-style: italic;
-  text-align: center;
-  color: antiquewhite;
-  margin-left: 20px;
+  text-align: left;
+  color: #181731;
+  padding-left: 30px;
 }
 
 .card-container {
@@ -45,10 +74,16 @@ body {
   margin-top: 40px;
   background-color: whitesmoke;
   border-radius: 10%;
-  height: 500px;
   border: 2px solid;
   border-color: #181731;
+  align-self: flex-start;
   width: 500px;
+}
+
+.select-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .select-dropdown {
@@ -65,15 +100,44 @@ body {
   border-radius: 10%;
   margin-right: 30px;
   align-self: flex-end;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .search-button:focus {
   outline: 0;
 }
 
+.auth-input {
+  width: 200px;
+  text-align: center;
+  align-self: center;
+  margin-bottom: 20px;
+}
+
+.auth-button {
+  width: 200px;
+  text-align: center;
+  align-self: center;
+  margin-bottom: 20px;
+}
+
+.signIn-container {
+  display: flex;
+  border: 2px solid;
+  border-radius: 5%;
+  flex-direction: column;
+  background-color: antiquewhite;
+  width: 600px;
+  margin: auto;
+}
+
+.signIn-header {
+  font-family: laca;
+  text-align: center;
+}
 .card-section {
   padding-left: 30px;
-  padding-top: 30px;
 }
 
 .card-section-header {

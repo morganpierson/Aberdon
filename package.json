@@ -30,8 +30,23 @@
   },
   "dependencies": {
     "@reach/router": "^1.2.1",
+    "firebase": "^6.6.0",
+    "firebase-admin": "^8.5.0",
+    "firebase-tools": "^7.3.1",
+    "moment": "^2.24.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-select": "^3.0.4"
-  }
+  },
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 ChromeAndroid versions",
+    "last 2 Firefox versions",
+    "last 2 FirefoxAndroid versions",
+    "last 2 Safari versions",
+    "last 2 iOS versions",
+    "last 2 Edge versions",
+    "last 2 Opera versions",
+    "last 2 OperaMobile versions"
+  ]
 }
