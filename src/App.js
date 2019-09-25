@@ -13,9 +13,6 @@ import UserProvider from './providers/UserProvider';
 
 const App = () => {
 
-  let unsubscribeFromFirestore = null;
-
-
   return (
     
     <div className='container'>
@@ -24,7 +21,7 @@ const App = () => {
       <Router>
         <About path='/about-us'/>
         <InvestmentSpecsCard path='/'/>
-        <SearchResults path='/results'/>
+        <SearchResults path='/results/:state/:type'/>
         <Authentication path='/authentication/:type' />
         <CurrentUser path='/user/:id' />
       </Router>

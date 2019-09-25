@@ -1,17 +1,10 @@
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
-import {navigate} from '@reach/router'
+import {navigate} from '@reach/router';
+import {firebaseConfig} from './config'
 // Your web app's Firebase configuration
-var firebaseConfig = {
-  apiKey: "AIzaSyAgeWYuJ2CEi0oXfcmwpcLP5EFeGCBWoqI",
-  authDomain: "acre-b40f3.firebaseapp.com",
-  databaseURL: "https://acre-b40f3.firebaseio.com",
-  projectId: "acre-b40f3",
-  storageBucket: "",
-  messagingSenderId: "888388165366",
-  appId: "1:888388165366:web:2d9d55274d160a566396d7"
-};
+
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
@@ -47,6 +40,7 @@ export const createUserProfileDocument = async (user, additionalData) => {
         createdAt,
         ...additionalData
       })
+      
     } catch(error) {
       console.error("Error creating user ", error);
     }

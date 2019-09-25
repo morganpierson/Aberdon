@@ -6,6 +6,22 @@ body {
   background-image: url("../assets/Telluride_real_estate.jpg");
 }
 
+.about-container {
+  background-color: antiquewhite;
+  border: 2px solid;
+  border-color: #181731;
+  border-radius: 10%;
+  margin: 0 20px;
+}
+
+.about-header {
+  text-align: center;
+}
+
+.about-intro {
+  text-align: center;
+}
+
 .container {
   display: flex;
   width: 100%;
@@ -95,17 +111,20 @@ body {
   width: 120px;
   font-family: laca;
   font-size: 20px;
-  color: antiquewhite;
-  background-color: #181731;
+  color: #181731;
+  background-color: antiquewhite;
   border-radius: 10%;
   margin-right: 30px;
   align-self: flex-end;
   margin-bottom: 20px;
   margin-top: 20px;
+  border: 2px solid;
+  border-color: #181731;
 }
 
-.search-button:focus {
-  outline: 0;
+.search-button:hover {
+  color: antiquewhite;
+  background-color: #181731;
 }
 
 .auth-input {

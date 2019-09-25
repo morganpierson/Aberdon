@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { auth, createUserProfileDocument } from '../firebase';
+import { navigate } from '@reach/router'
 
 class SignUp extends Component {
   state = { displayName: '', email: '', password: '' };
@@ -17,9 +18,10 @@ class SignUp extends Component {
     try {
       const {user} = await auth.createUserWithEmailAndPassword(email, password)
 
-      user.updateProfile({ displayName })
+      await user.updateProfile({ displayName })
 
-      createUserProfileDocument(user, {displayName})
+      await createUserProfileDocument(user, {displayName})
+      await navigate(`/user/${user.uid}`)
     } catch(error) {
       console.error(error);
     }
@@ -31,14 +33,15 @@ class SignUp extends Component {
     const { displayName, email, password } = this.state;
 
     return (
-      <form className="SignUp" onSubmit={this.handleSubmit}>
-        <h2>Sign Up</h2>
+      <form className="signIn-container" onSubmit={this.handleSubmit}>
+        <h2 className='signIn-header'>Sign Up</h2>
         <input
           type="text"
           name="displayName"
           placeholder="Display Name"
           value={displayName}
           onChange={this.handleChange}
+          className='auth-input'
         />
         <input
           type="email"
@@ -46,6 +49,7 @@ class SignUp extends Component {
           placeholder="Email"
           value={email}
           onChange={this.handleChange}
+          className='auth-input'
         />
         <input
           type="password"
@@ -53,8 +57,9 @@ class SignUp extends Component {
           placeholder="Password"
           value={password}
           onChange={this.handleChange}
+          className='auth-input'
         />
-        <input type="submit" value="Sign Up" />
+        <input type="submit" value="Sign Up" className='auth-button'/>
       </form>
     );
   }

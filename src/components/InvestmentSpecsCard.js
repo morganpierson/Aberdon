@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import Select from 'react-select';
 import {navigate} from '@reach/router'
 import SelectSection from './SelectSection';
 
@@ -18,13 +17,15 @@ const InvestmentSpecsCard = () => {
   const [selectedState, setSelectedState] = useState({value: "Arizona", label: 'Arizona'})
   const [propertyType, setPropertyType] = useState({value: "Apartments", label: "Apartments"})
 
+  async function handleSubmit(event) {
+    event.preventDefault();
+    await navigate(`/results/${selectedState.value}/${propertyType.value}`)
+  }
+
   return (
     <form 
     className='card-container'
-    onSubmit={(event) => {
-      event.preventDefault();
-      navigate('/results')
-    }}
+    onSubmit={handleSubmit}
     >
     <h3 className='sub-text'>Find your next investment.</h3>
      <SelectSection 

@@ -1,8 +1,11 @@
 import React from 'react';
 
-const SearchResults = () => {
+const SearchResults = (props) => {
+  console.log("PROPS ", props)
   return (
-    <div>Search Results</div>
+    <div>
+      <h1>Showing {props.type} results in {props.state}</h1>
+    </div>
   )
 }
 

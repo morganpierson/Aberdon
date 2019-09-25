@@ -1,13 +1,14 @@
 import React, {useContext} from 'react';
-import CurrentUser from './CurrentUser';
-import SignInAndSignUp from './SignInAndSignUp';
+import SignIn from './SignIn';
+import SignUp from './SignUp'
 import { UserContext } from '../providers/UserProvider'
 
-const Authentication = ({loading}) => {
-  const user = useContext(UserContext)
-  if(loading) return null;
+const Authentication = ({type}) => {
+  
   return ( 
-    <div><SignInAndSignUp/></div>
+    <div>
+      {type === 'login' ? <SignIn /> : <SignUp />}
+    </div>
     );
 }
 
